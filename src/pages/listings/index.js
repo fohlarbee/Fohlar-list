@@ -2,11 +2,10 @@ import Link from 'next/link';
 import styles from '../../styles/Listings.module.css'
 
 export const getStaticProps = async () => {
-    try {
+    // try {
         const res =  await fetch('https://jsonplaceholder.typicode.com/users');
         const data = await res.json();
         
-        // .then((json) => console.log(json));
       
         return {
             props:{listings:data}
@@ -14,10 +13,10 @@ export const getStaticProps = async () => {
         }
         
       
-    } catch (error) {
-        console.log(error)
+    // } catch (error) {
+        // console.log(error)
         
-    }
+    // }
  
 
 

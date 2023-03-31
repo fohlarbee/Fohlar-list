@@ -1,7 +1,6 @@
 export const getStaticPaths = async() => {
-    const res = await fetch('http://localhost:8000/listings');
+    const res = await fetch('https://jsonplaceholder.typicode.com/users');
     const data = await res.json();
-    console.log(data)
 
     const paths = data.map(listing => {
         return{
