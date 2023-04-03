@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import styles from '../../styles/Listings.module.css'
+// import styles from '../../styles/Listings.module.css'
+
 export const getStaticProps = async () => {
     // try {
         const res =  await fetch('https://jsonplaceholder.typicode.com/users');
@@ -31,7 +32,7 @@ const Listings = ({listings}) => {
         <div className="content">
             <h2>All Listings</h2>
             {listings.map(list => (
-                <Link  href={'/listings/' + list.id}  key={list.id} className={styles.single}>
+                <Link  href={'/listings/' + list.id}  key={list.id}>
                <h3>{list.name}</h3>
                 </Link>
             ))}
